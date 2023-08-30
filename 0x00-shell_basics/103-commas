@@ -1,8 +1,2 @@
 #!/bin/bash
-find . -maxdepth 1 -mindepth 1 -print | sort -d | while IFS= read -r entry; do
-    if [ -d "$entry" ]; then
-        printf "%s/, " "$entry"
-    else
-        printf "%s, " "$entry"
-    fi
-done | sed 's/, $/\n/'
+ls -amvp
